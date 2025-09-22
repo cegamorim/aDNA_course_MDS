@@ -1,10 +1,10 @@
 #### PLOT MDS ####
 
 # num_SNPs will be equivalent to the number of SNPs you have in your file. We calculated that in the terminal with wc -l datasetPCA_full.bim 
-num_SNPs<-322218
+num_SNPs<-321890
 
 # This command reads the distance matrix from PLINK
-Dist <- as.matrix(read.table("datasetPCA_full.dist")) / (2*num_SNPs)
+Dist <- as.matrix(read.table("datasetPCA_filt.dist")) / (2*num_SNPs)
 
 # Let's output the results to a PDF file. You may want to first run without this option and if you're happt with the results, you can print the output to a PDF file with this command.
 pdf("MDS.pdf")
